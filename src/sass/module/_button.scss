@@ -1,0 +1,93 @@
+@use "global" as *;
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: rem(280);
+  color: $black;
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  line-height: 1.5;
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  background-color: $white;
+  border: solid 1px #0B2049;
+  transition: .3s;
+  z-index: 0;
+  
+  @include mq(md) {
+    font-size: rem(18);
+    width: rem(408);
+    padding-top: rem(30);
+    padding-bottom: rem(30);
+  }
+}
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #0B2049;
+  // border: solid 1px #0B2049;
+  transition: .3s;
+  z-index: -1;
+}
+
+
+.button:hover {
+  color: $white;
+  transition: .3s;
+  z-index: 100;
+}
+
+
+.button:hover::before {
+  width: 100%;
+}
+
+
+.button.button--works {
+  font-size: rem(22);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: $white;
+  line-height: 1.0;
+  width: rem(133);
+  background-color: #0B2049;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  border: solid 1px #0B2049;
+}
+
+
+.button.button--works::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $white;
+  transition: .3s;
+  z-index: -1;
+  border: none;
+}
+
+
+.button.button--works:hover {
+  color: #0B2049;
+  transition: .3s;
+  z-index: 100;
+}
+
+
+.button.button--works:hover::before {
+  width: 100%;
+}

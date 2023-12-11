@@ -1,0 +1,83 @@
+@use "global" as *;
+
+
+.pc-nav {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    height: inherit;
+  }
+}
+
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+
+.pc-nav__item {
+  height: inherit;
+}
+
+
+.pc-nav__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: inherit;
+  padding: 0 clamp(rem(20), 3.0vw, rem(40));
+}
+
+
+.pc-nav__sub-title::after {
+  content: '';
+  position: absolute;
+  bottom: rem(-3);
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: rem(1);
+  background: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+
+.pc-nav__menu:hover {
+  opacity: 0.6;
+}
+
+
+/*現在地とhoverの設定*/
+.pc-nav__menu:hover .pc-nav__sub-title::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+.pc-nav__title {
+  color: $white;
+  text-align: center;
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  letter-spacing: 0.02em;
+  line-height: 1.0;
+}
+
+
+.pc-nav__sub-title {
+  position: relative;
+  color: $white;
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $Medium;
+  text-align: center;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  margin-top: rem(8);
+}

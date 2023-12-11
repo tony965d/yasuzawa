@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(64);
+  }
+}

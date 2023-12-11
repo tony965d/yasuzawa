@@ -1,0 +1,120 @@
+@use "global" as *;
+
+
+.footer__information {
+  position: relative;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  
+  @include mq(md) {
+    padding-top: rem(78);
+    padding-bottom: rem(62);
+  }
+}
+
+
+.footer__information::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #223554;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.footer-information__inner.inner {
+  max-width: rem(1270);
+}
+
+
+
+.footer-information__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(60);
+  
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(114);
+  }
+}
+
+
+.footer-information__logo img {
+  aspect-ratio: 224 / 46;
+  object-fit: cover;
+  width: rem(224);
+}
+
+
+.footer-information__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(40);
+  
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: rem(72);
+  }
+}
+
+
+.footer-information__address-zip {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+}
+
+
+.footer-information__address-text {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  margin-top: rem(8);
+}
+
+
+
+.footer-information__number {
+  font-size: rem(22);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+}
+
+
+.footer-information__fax {
+  font-size: rem(22);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+}
+
+
+.footer-information__tel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: rem(24);
+  row-gap: rem(12);
+  
+  @include mq(md) {
+    justify-content: flex-start;
+  }
+}

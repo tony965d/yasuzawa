@@ -1,0 +1,67 @@
+@use "global" as *;
+
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+.footer-nav__logo {
+  display: inline-block;
+  aspect-ratio: 70 / 30;
+  object-fit: cover;
+  width: rem(70);
+  
+  @include mq(md) {
+    aspect-ratio: 70 / 40;
+  }
+}
+
+
+.footer-nav__logo img {
+  height: 100%;
+}
+
+
+.footer-nav__items {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(10);
+
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+.footer-nav__item {
+  margin-top: rem(14);
+  
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+
+.footer-nav__menu {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.0;
+  padding: 0 clamp(rem(20), 4.0vw, rem(50));
+  
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}

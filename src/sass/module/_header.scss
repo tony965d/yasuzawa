@@ -1,0 +1,90 @@
+@use "global" as *;
+
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: rem(80);
+  background: #223554;
+  z-index: 100;
+
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+
+.header__inner.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: inherit;
+  
+  @include mq(md) {
+    width: 100%;
+    margin: 0;
+    padding-right: rem(20);
+    padding-left: rem(40);
+  }
+}
+
+
+.header__logo {
+  display: block;
+  align-items: center;
+  height: inherit;
+  z-index: 1000;
+}
+
+
+.header__logo:hover {
+  opacity: 0.6;
+}
+
+
+.header__image {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+
+.header__image img {
+  aspect-ratio: 160 / 34;
+  width: rem(160);
+  height: rem(34);
+  max-width: rem(160);
+}
+ 
+
+.header__hamburger {
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+
+.header__right {
+  display: none;
+  
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+}
+
+
+.header__tel-number {
+  font-size: rem(22);
+  font-family: $base-font-family;
+  font-weight: $Regular;
+  color: #241717;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+  width: rem(230);
+  padding: rem(12) rem(14);
+  background-color: #B5B0B0;
+}

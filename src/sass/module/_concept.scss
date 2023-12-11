@@ -1,0 +1,74 @@
+@use "global" as *;
+
+
+.concept {
+  position: relative;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+  
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(224);
+  }
+}
+
+.concept::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/common/concept.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%; 
+  z-index: -10;
+}
+
+.concept::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(36, 23, 23, 0.51);
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+}
+
+
+.concept__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1100);
+  }
+}
+
+
+.concept__title {
+  display: inline-block;
+  font-size: rem(36);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 1.0;
+  letter-spacing: 0.23em;
+  padding-bottom: rem(12);
+  border-bottom: solid 1px $white;
+}
+
+
+.concept__text {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $white;
+  line-height: 2.2;
+  letter-spacing: 0.2em;
+  margin-top: rem(44);
+  
+  @include mq(md) {
+    font-size: rem(21);
+    letter-spacing: 0.1em;
+  }
+}

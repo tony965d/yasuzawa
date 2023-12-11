@@ -1,0 +1,18 @@
+@use "global" as *;
+
+
+.swiper-slide-active .slide-image,
+.swiper-slide-duplicate-active .slide-image,
+.swiper-slide-prev .slide-image {
+  animation: zoomUp 10s linear 0s 1 normal both;  
+}
+
+@keyframes zoomUp {
+  0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15);
+    }
+  }
+

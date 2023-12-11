@@ -1,0 +1,55 @@
+@use "global" as *;
+
+
+.works__inner {
+  position: relative;
+}
+
+
+.works__inner::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: clamp(60px, 20%, 180px);
+  width: max(160px, min(80%, 542px));
+  height: max(240px, min(40%, 814px));
+  background-image: url(../images/common/works-bg.png);
+  background-size: cover;
+  aspect-ratio: 542 / 814;
+  z-index: -1;
+
+  @include mq(md) {
+    left: clamp(388px, 50vw, 694px);
+    width: rem(542);
+    height: 100%;
+    // height: rem(814);
+  }
+}
+
+
+.works__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1114);
+  }
+}
+
+
+.works__container {
+  padding-bottom: rem(80);
+  
+  @include mq(md) {
+    padding-bottom: rem(134);
+  }
+}
+
+
+.works__wrapper {
+  margin-top: rem(48);
+}
+
+
+.works__button {
+  text-align: center;
+  margin-top: rem(46);
+}

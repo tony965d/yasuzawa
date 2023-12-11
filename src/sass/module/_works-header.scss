@@ -1,0 +1,40 @@
+@use "global" as *;
+
+
+.works-header {
+  text-align: center;
+}
+
+
+.works-header__title {
+  font-size: rem(28);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #241717;
+  line-height: 1.0;
+  letter-spacing: 0.1em;
+  
+  @include mq(md) {
+    font-size: rem(36);
+  }
+}
+
+
+.works-header__sub-title {
+  display: inline-block;
+  font-size: rem(22);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #241717;
+  line-height: 1.0;
+  text-align: center;
+  border-top: solid 1px #241717;
+  padding-top: rem(14);
+  margin-top: rem(20);
+  
+  @include mq(md) { 
+    font-size: rem(16);
+    padding-top: rem(18);
+    margin-top: rem(26);
+  }
+}
