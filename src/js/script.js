@@ -29,5 +29,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
  
 
 
+   // ///// * ズームアウト */////
+   $(document).ready(function() {
+      // ページが読み込まれた後に実行されるコード
+      $('.js-mv-sub').each(function() {
+      // アニメーションを適用したい要素にスタイルを設定
+      $(this).css('animation', 'zoomOut 1s ease-out forwards');
+      });
+   });
 
 });

@@ -20,11 +20,17 @@ function my_setup() {
 	global $top;
 	$top = esc_url(home_url('/'));
 
-	global $top;
-  $top = esc_url(home_url( '/top' ));
+	global $company;
+  $company = esc_url(home_url( '/company' ));
 
-	global $top;
-  $top = esc_url(home_url( '/top' ));
+	global $works;
+  $works = esc_url(home_url( '/works' ));
+
+	global $recruit;
+  $recruit = esc_url(home_url( '/recruit' ));
+
+	global $contact;
+  $contact = esc_url(home_url( '/contact' ));
 }
 add_action( 'after_setup_theme', 'my_setup' );
 

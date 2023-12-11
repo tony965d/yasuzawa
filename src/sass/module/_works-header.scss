@@ -10,7 +10,7 @@
   font-size: rem(28);
   font-family: $base-font-family;
   font-weight: $Bold;
-  color: #241717;
+  color: $black;
   line-height: 1.0;
   letter-spacing: 0.1em;
   
@@ -25,10 +25,10 @@
   font-size: rem(22);
   font-family: $base-font-family;
   font-weight: $Bold;
-  color: #241717;
+  color: $black;
   line-height: 1.0;
   text-align: center;
-  border-top: solid 1px #241717;
+  border-top: solid 1px $black;
   padding-top: rem(14);
   margin-top: rem(20);
   

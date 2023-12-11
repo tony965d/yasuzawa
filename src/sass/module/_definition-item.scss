@@ -1,0 +1,59 @@
+@use "global" as *;
+
+
+.definition-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: rem(2);
+  padding: rem(20) 0; 
+  border-bottom: dashed 1px rgba(143, 143, 143, 0.76);
+}
+
+
+.definition-item--license {
+  padding-top: rem(20);
+  padding-bottom: rem(20);
+  
+  @include mq(md) {
+    padding-top: rem(66);
+    padding-bottom: rem(46);
+  }
+}
+
+
+.definition-item__name {
+  color: $black;
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  width: 26%;
+  // padding-left: rem(20);
+  
+  @include mq(md) {
+    font-size: rem(18);
+    width: 24%;
+    padding-left: rem(40);
+  }
+}
+
+
+.definition-item__text {
+  color: $black;
+  font-size: rem(12);
+  font-family: $second-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  width: 74%;
+  
+  @include mq(md) {
+    font-size: rem(18);
+    width: 76%;
+  }
+}
+

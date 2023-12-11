@@ -1,0 +1,40 @@
+@use "global" as *;
+
+
+.section-header__title {
+  display: flex;
+  align-items: center;
+  gap: rem(88);
+  font-size: rem(26);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: rem(36);
+  }
+}
+
+
+.section-header__title::before,
+.section-header__title::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: $black;
+}
+
+
+.section-header__sub-title {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.36em;
+  text-align: center;
+  margin-top: rem(18);
+}

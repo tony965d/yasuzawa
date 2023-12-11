@@ -1,0 +1,72 @@
+@use "global" as *;
+
+
+.company-map__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1268);
+  }
+}
+
+
+.company-map__container {
+  position: relative;
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+
+  @include mq(md) {
+    padding-top: rem(188);
+    padding-bottom: rem(116);
+  }
+}
+
+
+.company-map__container::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/common/company-map-bg.png);
+  background-size: cover;
+  aspect-ratio: 576 / 614;
+  width: 100%;
+  height: 100%;
+  max-width: rem(576);
+  max-height: rem(614);
+  z-index: -1;
+  
+  @include mq(md) {
+    top: rem(100);
+    bottom: unset;
+  }
+}
+
+
+.company-map__title {
+  font-size: rem(28);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  
+  @include mq(md) {
+    font-size: rem(36);
+  }
+}
+
+
+.company-map__sub-title {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.04em;
+  margin-top: rem(20);
+  
+  @include mq(md) {
+    font-size: rem(24);
+    margin-top: rem(36);
+  }
+}

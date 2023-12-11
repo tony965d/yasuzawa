@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.top-company-information {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
