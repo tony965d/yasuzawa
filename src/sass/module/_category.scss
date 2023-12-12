@@ -1,0 +1,20 @@
+@use "global" as *;
+
+
+.category__name {
+  position: relative;
+  display: inline-block;
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: #223554;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: rem(4) clamp(6px, 1.6vw, 10px);
+  
+  @include mq(md) {
+    font-size: rem(18);
+    padding: rem(4) rem(12);
+  }
+}
+

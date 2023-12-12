@@ -193,14 +193,14 @@ add_filter( 'wpcf7_validate_tel*', 'wpcf7_tel_validation_filter', 11, 2 );
 function Change_menulabel() {
 	global $menu;
 	global $submenu;
-	$name = '任意';
+	$name = '実績';
 	$menu[5][0] = $name;
 	$submenu['edit.php'][5][0] = $name.'一覧';
 	$submenu['edit.php'][10][0] = '新規追加';
 }
 function Change_objectlabel() {
 	global $wp_post_types;
-	$name = '任意';
+	$name = '実績';
 	$labels = &$wp_post_types['post']->labels;
 	$labels->name = $name;
 	$labels->singular_name = $name;
@@ -215,3 +215,8 @@ function Change_objectlabel() {
 }
 add_action( 'init', 'Change_objectlabel' );
 add_action( 'admin_menu', 'Change_menulabel' );
+
+
+
+///// WPのバージョンを非表示 /////
+remove_action('wp_head', 'wp_generator');

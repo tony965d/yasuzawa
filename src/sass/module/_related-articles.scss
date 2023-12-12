@@ -1,0 +1,30 @@
+@use "global" as *;
+
+
+.related-articles {
+  padding-bottom: rem(74);
+}
+
+
+.related-articles__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(1200);
+  }
+}
+
+
+.related-articles__title {
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+
+.related-articles__cards {
+  margin-top: rem(28);
+}

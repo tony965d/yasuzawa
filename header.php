@@ -11,7 +11,7 @@
     global $company;
     global $works;
     global $recruit;
-    global $company;
+    global $contact;
   ?>  
 
 <body <?php body_class(); ?>>

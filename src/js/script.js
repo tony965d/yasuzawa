@@ -2,6 +2,7 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
    
    
+   ///// ハンバーガーメニュー /////
    $('.js-hamburger').click(function() {
       if($('.js-hamburger').hasClass('active')) {
       $('.js-hamburger').removeClass('active');
@@ -16,7 +17,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
    
    
-   /// mv画像swiperフェードアウト /////
+   ///// mv画像swiperフェードアウト /////
    var swiper = new Swiper(".js-mv-swiper", {
       loop: true,
       effect: 'fade',
@@ -29,7 +30,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
  
 
 
-   // ///// * ズームアウト */////
+   ///// * ズームアウト */////
    $(document).ready(function() {
       // ページが読み込まれた後に実行されるコード
       $('.js-mv-sub').each(function() {
@@ -38,4 +39,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       });
    });
 
+
+
+   ///// リンク先が現在のページと紐づいている要素にcurrent要素を付与する /////
+   
+
+   
 });

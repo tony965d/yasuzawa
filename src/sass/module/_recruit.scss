@@ -1,0 +1,44 @@
+@use "global" as *;
+
+
+.recruit__inner.inner {
+
+  @include mq(md) {
+    max-width: rem(970);
+  }
+}
+
+
+.recruit__title {
+  font-size: rem(18);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: 1.2;
+  }
+}
+
+
+.recruit__body {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(54);
+  }
+}
+
+
+.recruit__text {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 2.5;
+  letter-spacing: 0.04em;
+}

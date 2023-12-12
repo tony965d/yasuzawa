@@ -3,7 +3,7 @@
     global $company;
     global $works;
     global $recruit;
-    global $company;
+    global $contact;
   ?>  
 
   <footer class="footer top-footer">

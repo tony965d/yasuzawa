@@ -12,3 +12,12 @@
     gap: rem(64);
   }
 }
+
+
+.cards--related {
+  
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: rem(26);
+  }
+}

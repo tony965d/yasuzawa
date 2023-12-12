@@ -32,29 +32,13 @@
 }
 
 
-.pc-nav__sub-title::after {
-  content: '';
-  position: absolute;
-  bottom: rem(-10);
-  left: 0;
-  /*線の形状*/
-  width: 100%;
-  height: rem(1);
-  background: $white;
-  /*アニメーションの指定*/
-  transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
-}
-
-
 .pc-nav__menu:hover {
   opacity: 0.6;
 }
 
 
 /*現在地とhoverの設定*/
-.pc-nav__menu:hover .pc-nav__sub-title::after {
+.pc-nav__menu:hover .pc-nav__sub-title::before {
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
@@ -81,3 +65,30 @@
   letter-spacing: 0.02em;
   margin-top: rem(8);
 }
+
+
+.pc-nav__sub-title::before {
+  content: '';
+  position: absolute;
+  bottom: rem(-10);
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: rem(1);
+  background: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+
+// .current.pc-nav__sub-title::after {
+//   position: absolute;
+//   bottom: rem(-10);
+//   left: 0;
+//   width: 100%;
+//   height: rem(1);
+//   background-color: $white;
+// }
+
