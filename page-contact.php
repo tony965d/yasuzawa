@@ -12,17 +12,26 @@
       </div>
     </div>
   </section>
-  
-  <section class="contact">
-    <div class="contact__inner inner">
 
-      
-      <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : the_post(); ?>
-      <?php echo do_shortcode('[]'); ?>
-      <?php endwhile; ?>
-      <?php endif;  ?>
+  <section class="contact top-contact">
+    <div class="contact__inner inner">
+      <p class="contact__text">お問い合わせはお電話・または下記のお問い合わせフォームよりお願いいたします。</p>
+      <div class="contact__tel-block">
+        <h3 class="contact__tel-title">お電話でのお問い合わせ</h3>
+        <div class="contact__tel-item">TEL</div>
+        <a class="contact__tel-number" href="tel:049-24-3333">049-24-3333</a>
+        <p class="contact__reception-hours">(受付時間/8:00〜17:00)</p>
+      </div>
+      <div class="contact__wrapper">
         
+        <div class="contact__form-body">
+          <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+            <?php echo do_shortcode('[contact-form-7 id="a1daaf0" title="コンタクトフォーム"]'); ?>
+            <?php endwhile; ?>
+            <?php endif;  ?>
+        </div>
+      </div>
     </div>
   </section>
 
