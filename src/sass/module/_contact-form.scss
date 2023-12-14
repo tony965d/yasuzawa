@@ -45,8 +45,10 @@
   display: flex;
   align-items: flex-start;
   width: 100%;
-  color: $black;
+  font-size: rem(16);
+  font-family: $mincho-font-family;
   font-weight: $Bold;
+  color: $black;
   line-height: 1.0;
 
   @include mq(md) {
@@ -84,7 +86,7 @@
 
 .contact-form__content--header .contact-form__text {
   font-size: rem(16);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $black;
   line-height: 1.0;

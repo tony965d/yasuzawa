@@ -1,6 +1,34 @@
 @use "global" as *;
 
 
+.recruit {
+  position: relative;
+  padding-bottom: rem(80);
+  
+  @include mq(md) {
+    padding-bottom: rem(294);
+  }
+}
+
+
+.recruit::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/common/recruit-bg.png);
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 1244 / 652;
+  width: 100%;
+  height: 100%;
+  max-width: rem(1244);
+  max-height: rem(652);
+  z-index: -1;
+}
+
+
 .recruit__inner.inner {
 
   @include mq(md) {
@@ -11,7 +39,7 @@
 
 .recruit__title {
   font-size: rem(18);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $black;
   line-height: 1.5;
@@ -36,9 +64,15 @@
 
 .recruit__text {
   font-size: rem(14);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $black;
   line-height: 2.5;
   letter-spacing: 0.04em;
+}
+
+
+.recruit__button {
+  text-align: center;
+  margin-top: rem(60);
 }

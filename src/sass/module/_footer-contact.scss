@@ -34,7 +34,7 @@
 .footer-contact__text {
   display: inline-block;
   font-size: rem(24);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -68,7 +68,7 @@
 
 .footer-contact__tel-text {
   font-size: rem(16);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -84,7 +84,7 @@
 
 .footer-contact__number {
   font-size: rem(24);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -93,6 +93,11 @@
   @include mq(md) {
     font-size: rem(48);
   }
+}
+
+
+.footer-contact__number:hover {
+  opacity: 0.6;
 }
 
 

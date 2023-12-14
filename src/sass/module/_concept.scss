@@ -48,7 +48,7 @@
 .concept__title {
   display: inline-block;
   font-size: rem(36);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -60,11 +60,11 @@
 
 .concept__text {
   font-size: rem(16);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 2.2;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.01em;
   margin-top: rem(44);
   
   @include mq(md) {

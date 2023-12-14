@@ -1,0 +1,23 @@
+@use "global" as *;
+
+
+.error__body {
+  padding-top: rem(80);
+  padding-bottom: rem(80);
+}
+
+
+.error__title {
+  font-size: rem(24);
+  font-family: $mincho-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+.error__button {
+  text-align: center;
+  margin-top: rem(40);
+}

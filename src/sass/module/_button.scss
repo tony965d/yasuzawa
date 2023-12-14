@@ -8,7 +8,7 @@
   width: rem(280);
   color: $black;
   font-size: rem(16);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   line-height: 1.5;
   padding-top: rem(20);
@@ -96,6 +96,8 @@
 .button.button--contact-form {
   width: rem(224);
   font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $Regular;
   background-color: #223554;
   box-shadow: 0 2px 3px 2px rgba(128, 128, 128, 0.7);
   border: none;
@@ -119,4 +121,46 @@
 
 .button.button--contact-form:hover::before {
   width: 100%;
+}
+
+
+.button.button--entry {
+  font-size: rem(16);
+  font-family: $mincho-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.04em;
+  width: rem(234);
+  padding: rem(8) 0;
+}
+
+
+.button.button--entry::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $black;
+  transition: .3s;
+  z-index: -1;
+  border: none;
+}
+
+
+.button.button--entry:hover {
+  color: $white;
+}
+
+
+.button.button--entry:hover::before {
+  width: 100%;
+}
+
+
+.button.button--error {
+  width: rem(234);
+  padding: rem(8) 0;
 }

@@ -16,17 +16,19 @@
   <section class="recruit top-recruit">
     <div class="recruit__inner inner">
       <div class="recruit__wrapper">
-        <h2 class="recruit__title">株式会社ヤスザワ設計ではスタッフを募集しています。</h2>
+        <h2 class="recruit__title js-fadeUp">株式会社ヤスザワ設計ではスタッフを募集しています。</h2>
         <div class="recruit__body">
-          <p class="recruit__text">
+          <p class="recruit__text js-fadeUp">
             ヤスザワ設計では住宅、工場、オフィスビル、事務所ビル、医院、テナントの内装デザインなどよう用途にこだわらず幅広く設計を行うスタッフを募集しています。<br>
             基本計画から実施、申請、現場監理、一貫して経験することができます。最初は先輩スタッフとペアになり、一連の流れを覚えていただきます。
             慣れてきましたら、プロジェクトのスタートから竣工までを主担当として携わっていただきます。
           </p>
         </div>
+        <div class="recruit__table"></div>
+        <div class="recruit__button js-fadeUp">
+          <a href="#" class="button button--entry">応募エントリー</a>
+        </div>
       </div>
-
-      
     </div>
   </section>
 

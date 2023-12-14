@@ -18,33 +18,15 @@
   position: relative;
   display: inline-block;
   font-size: rem(12);
-  font-family: $second-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
-  line-height: 1.0;
+  line-height: 0.6;
   letter-spacing: 0.1em;
   width: rem(28);
   height: rem(26);
   padding: rem(8) rem(10);
   border: solid 1px $black;
 }
-
-
-// .navigation .page-numbers::before {
-//   content: "[";
-//   position: absolute;
-//   top: 50%;
-//   left: rem(-2);
-//   transform: translateY(-50%);
-// }
-
-
-// .navigation .page-numbers::after {
-//   content: "]";
-//   position: absolute;
-//   top: 50%;
-//   right: rem(-2);
-//   transform: translateY(-50%);
-// }
 
 
 .navigation .page-numbers.current {
@@ -59,21 +41,21 @@
 }
 
 
-// .navigation .page-numbers.next {
-//   margin-left: rem(4);
-// }
-
-
 .navigation .page-numbers.next::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 42%;
   transform: translate(-50%, -50%) rotate(45deg);
-  width: rem(10);
-  height: rem(10);
+  width: rem(6);
+  height: rem(6);
   border-right: rem(1.65) solid #000;
   border-top: rem(1.65) solid #000;
+  
+  @include mq(md) {
+    width: rem(10);
+    height: rem(10);
+  }
 }
 
 
@@ -82,24 +64,29 @@
 }
 
 
-// .navigation .page-numbers.prev {
-//   margin-right: rem(4);
-// }
-
-
 .navigation .page-numbers.prev::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 58%;
   transform: translate(-50%, -50%) rotate(225deg);
-  width: rem(10);
-  height: rem(10);
+  width: rem(6);
+  height: rem(6);
   border-right: rem(1.65) solid #000;
-  border-top: rem(1.65) solid #000;  
+  border-top: rem(1.65) solid #000;
+  
+  @include mq(md) {
+    width: rem(10);
+    height: rem(10);
+  }
 }
 
 
 .navigation .page-numbers.prev::after {
   display: none;
+}
+
+
+.navigation .nav-links .page-numbers.dots {
+  padding-left: rem(8);
 }

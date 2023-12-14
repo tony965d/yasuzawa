@@ -32,8 +32,8 @@
     <section class="concept top-concept">
       <div class="concept__inner inner">
         <div class="concept__body">
-          <h2 class="concept__title">concept</h2>
-          <p class="concept__text">
+          <h2 class="concept__title js-fadeLeft">concept</h2>
+          <p class="concept__text js-fadeLeft">
             私たちは、滋賀県を拠点に環境にやさしく<br>
             優れた機能と魅力的な造形を追求した<br>
             ４次元（空間+時間）の建てものを創造し、<br>
@@ -47,49 +47,46 @@
       <div class="works__inner inner">
         <div class="works__container">
           <div class="works__header works-header">
-            <h2 class="works-header__title">最新の実績</h2>
-            <p class="works-header__sub-title">WORKS</p>
+            <h2 class="works-header__title js-fadeUp">最新の実績</h2>
+            <p class="works-header__sub-title js-fadeUp">WORKS</p>
           </div>
           <div class="works__wrapper">
             <div class="works__cards cards">
+            <?php 
+              $works_query = new WP_Query(
+              array(
+              'post_type'      => 'post',
+              'posts_per_page' => 4,
+              )
+              );
+            ?>
+            <?php if ( $works_query->have_posts() ) : ?>
+            <?php while ( $works_query->have_posts() ) : ?>
+            <?php $works_query->the_post(); ?>
               <a href="<?php the_permalink(); ?>" class="cards__card card">
-                <figure class="card__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/works1.jpg" alt="">
+                <figure class="card__image js-fadeUp">
+                  <?php if (has_post_thumbnail()) { ?>
+                  <?php the_post_thumbnail('full'); ?>
+                  <?php } else { ?>
+                  <?php } ?>
                 </figure>
                 <div class="card__body">
-                  <h4 class="card__title">WORKS NAME</h4>
-                  <p class="card__text">CATEGORY NAME</p>
+                  <h4 class="card__title js-fadeUp"><?php the_title(); ?></h4>
+                  <p class="card__text js-fadeUp">
+                    <?php 
+                      $terms = get_the_terms($post->ID,'category');
+                        foreach ( $terms as $term ) {
+                          echo $term->name ;
+                        }
+                    ?>
+                  </p>
                 </div>
               </a>
-              <a href="<?php the_permalink(); ?>" class="cards__card card">
-                <figure class="card__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/works2.jpg" alt="">
-                </figure>
-                <div class="card__body">
-                  <h4 class="card__title">WORKS NAME</h4>
-                  <p class="card__text">CATEGORY NAME</p>
-                </div>
-              </a>
-              <a href="<?php the_permalink(); ?>" class="cards__card card">
-                <figure class="card__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/works3.jpg" alt="">
-                </figure>
-                <div class="card__body">
-                  <h4 class="card__title">WORKS NAME</h4>
-                  <p class="card__text">CATEGORY NAME</p>
-                </div>
-              </a>
-              <a href="<?php the_permalink(); ?>" class="cards__card card">
-                <figure class="card__image">
-                  <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/works4.jpg" alt="">
-                </figure>
-                <div class="card__body">
-                  <h4 class="card__title">WORKS NAME</h4>
-                  <p class="card__text">CATEGORY NAME</p>
-                </div>
-              </a>
+              <?php wp_reset_postdata(); ?>
+              <?php endwhile; ?>
+              <?php endif;  ?>
             </div>
-            <div class="works__button">
+            <div class="works__button js-fadeUp">
               <a href="<?php echo $works ?>" class="button button--works">more</a>
             </div>
           </div>

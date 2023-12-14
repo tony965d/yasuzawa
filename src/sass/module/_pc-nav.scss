@@ -83,12 +83,19 @@
 }
 
 
-// .current.pc-nav__sub-title::after {
-//   position: absolute;
-//   bottom: rem(-10);
-//   left: 0;
-//   width: 100%;
-//   height: rem(1);
-//   background-color: $white;
-// }
+.pc-nav__sub-title.current {
+  position: relative;
+}
+
+
+.pc-nav__sub-title.current::before {
+  content: '';
+  position: absolute;
+  bottom: rem(-10);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+  transform: scale(1, 1);
+}
 

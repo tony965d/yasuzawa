@@ -33,31 +33,31 @@
             <li class="pc-nav__item">
               <a href="<?php echo $top ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">ホーム</div>
-                <p class="pc-nav__sub-title">home</p>
+                <p class="pc-nav__sub-title<?php if (is_front_page()) { echo ' current'; } ?>">home</p>
               </a>    
             </li>
             <li class="pc-nav__item">
               <a href="<?php echo $company ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">会社概要</div>
-                <p class="pc-nav__sub-title">company</p>
+                <p class="pc-nav__sub-title<?php if (is_page('company')) { echo ' current'; } ?>">company</p>
               </a>    
             </li>
             <li class="pc-nav__item">
               <a href="<?php echo $works ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">実績</div>
-                <p class="pc-nav__sub-title">works</p>
+                <p class="pc-nav__sub-title<?php if (is_home() || is_single()) { echo ' current'; } ?>">works</p>
               </a>    
             </li>
             <li class="pc-nav__item">
               <a href="<?php echo $recruit ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">求人情報</div>
-                <p class="pc-nav__sub-title">recruit</p>
+                <p class="pc-nav__sub-title<?php if (is_page('recruit')) { echo ' current'; } ?>">recruit</p>
               </a>  
             </li>
             <li class="pc-nav__item">
               <a href="<?php echo $contact ?>" class="pc-nav__menu">
                 <div class="pc-nav__title">お問い合わせ</div>
-                <p class="pc-nav__sub-title">contact</p>
+                <p class="pc-nav__sub-title<?php if (is_page('contact')) { echo ' current'; } ?>">contact</p>
               </a>  
             </li>
           </ul>

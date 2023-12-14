@@ -16,8 +16,8 @@
   <section class="works-sub top-works-sub">
     <div class="works-sub__header">
       <div class="works-sub__header-inner inner">
-        <h3 class="works-sub__category-title">CATEGORY</h3>
-        <div class="works-sub__categories categories">
+        <h3 class="works-sub__category-title js-fadeUp">CATEGORY</h3>
+        <div class="works-sub__categories categories js-fadeUp">
           <?php
             $args = [
               'taxonomy' => 'category',
@@ -37,15 +37,15 @@
           <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="cards__card card">
-              <figure class="card__image">
+              <figure class="card__image js-fadeUp">
                 <?php if (has_post_thumbnail()) { ?>
                 <?php the_post_thumbnail('full'); ?>
                 <?php } else { ?>
                 <?php } ?>
               </figure>
               <div class="card__body">
-                <h4 class="card__title"><?php the_title(); ?></h4>
-                <p class="card__text">
+                <h4 class="card__title js-fadeUp"><?php the_title(); ?></h4>
+                <p class="card__text js-fadeUp">
                   <?php 
                     $terms = get_the_terms($post->ID,'category');
                       foreach ( $terms as $term ) {

@@ -5,7 +5,7 @@
   position: relative;
   display: inline-block;
   font-size: rem(14);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: #223554;
   text-align: center;
@@ -18,3 +18,7 @@
   }
 }
 
+
+.category__name:hover {
+  opacity: 0.6;
+}

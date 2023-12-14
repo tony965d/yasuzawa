@@ -54,8 +54,9 @@
 
 
 .footer-nav__menu {
+  position: relative;
   font-size: rem(16);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -65,3 +66,9 @@
     font-size: rem(18);
   }
 }
+
+
+.footer-nav__menu:hover {
+  opacity: 0.6;
+}
+

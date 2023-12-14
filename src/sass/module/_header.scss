@@ -79,7 +79,7 @@
 
 .header__tel-number {
   font-size: rem(22);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Regular;
   color: $black;
   line-height: 1.0;
@@ -87,4 +87,9 @@
   width: rem(230);
   padding: rem(12) rem(14);
   background-color: #B5B0B0;
+}
+
+
+.header__tel-number:hover {
+  opacity: 0.6;
 }

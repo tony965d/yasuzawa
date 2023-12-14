@@ -69,9 +69,9 @@
 .company-information__title {
   display: inline-flex;
   font-size: rem(30);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
-  color: $black;
+  color: rgba(36, 23, 23, 0.31);
   line-height: 1.0;
   letter-spacing: 0.04em;
   writing-mode: vertical-rl;

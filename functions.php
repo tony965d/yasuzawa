@@ -42,13 +42,19 @@ function my_script_init() { // my_script_init 関数の定義
 	wp_enqueue_style('swiper-css', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '11', 'all');
 
 	// 外部のGoogle Fontsからフォントを読み込む
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap', array(), null );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Zen+Old+Mincho:wght@700&display=swap', array(), null );
 	
 	// style-css スタイルシートを追加し、テーマディレクトリ内のCSSファイルを読み込む
 	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/dist/assets/css/style.css', array(), '1.0.1', 'all' );
 	
 	// jQuery ライブラリを追加し、外部のCDNから読み込む
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.js', array(), '3.6.0', true );
+
+// GSAPのスクリプトを登録し読み込む
+	wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', array(), '3.9.1', false);
+    
+	// ScrollTriggerのスクリプトを登録し読み込む
+	wp_enqueue_script('scrolltrigger', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', array('gsap'), '3.9.1', false);
 	
 	// swiper-js JavaScriptファイルを追加し、外部のCDNから読み込む/ 依存関係として 'jquery' を指定
 	wp_enqueue_script('swiper-js', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11', true);

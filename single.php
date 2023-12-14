@@ -16,8 +16,8 @@
   <section class="works-article">
     <div class="works-article__header">
       <div class="works-article__header-inner inner">
-        <h2 class="works-article__title"><?php the_title(); ?></h2>
-        <div class="works-article__thumbnail">
+        <h2 class="works-article__title js-fadeUp"><?php the_title(); ?></h2>
+        <div class="works-article__thumbnail js-fadeUp">
           <?php if (has_post_thumbnail()) { ?>
           <?php the_post_thumbnail('full'); ?>
           <?php } else { ?>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="works-article__wrapper">
+    <div class="works-article__wrapper js-fadeUp">
       <?php the_content(); ?>
       <div class="works-article__wrapper-inner inner">
         <div class="works-article__images">
@@ -38,7 +38,7 @@
               }
               foreach ($fields as $field) { 
             ?>
-            <div class="works-article__two-block-image">
+            <div class="works-article__two-block-image js-fadeUp">
               <img src="<?php echo $field['works_image'];?>" alt="">
             </div>
             <?php }; ?>
@@ -52,7 +52,7 @@
               }
               foreach ($fields as $field) { 
             ?>
-            <div class="works-article__three-block-image">
+            <div class="works-article__three-block-image js-fadeUp">
               <img src="<?php echo $field['works_image'];?>" alt="">
             </div>
             <?php }; ?>
@@ -64,13 +64,14 @@
 
   <section class="related-articles top-related-articles">
     <div class="related-articles__inner inner">
-      <h4 class="related-articles__title">Other Project</h4>
+      <h4 class="related-articles__title js-fadeUp">Other Project</h4>
       <div class="related-articles__cards cards cards--related">
         <?php 
         $works_query = new WP_Query(
         array(
         'post_type'      => 'post',
         'posts_per_page' => 4,
+        'orderby' => 'rand',
         )
         );
         ?>
@@ -79,15 +80,15 @@
         <?php $works_query->the_post(); ?>
         
         <a href="<?php the_permalink(); ?>" class="cards__card card card--related">
-          <figure class="card__image">
+          <figure class="card__image js-fadeUp">
             <?php if (has_post_thumbnail()) { ?>
             <?php the_post_thumbnail('full'); ?>
             <?php } else { ?>
             <?php } ?>
           </figure>
           <div class="card__body">
-            <h4 class="card__title"><?php the_title(); ?></h4>
-            <p class="card__text">
+            <h4 class="card__title js-fadeUp"><?php the_title(); ?></h4>
+            <p class="card__text js-fadeUp">
               <?php 
                 $terms = get_the_terms($post->ID,'category');
                   foreach ( $terms as $term ) {
@@ -101,10 +102,7 @@
         <?php endwhile; ?>
         <?php endif;  ?>
       </div>
-
-      
     </div>
-
   </section>
 
 

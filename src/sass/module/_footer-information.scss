@@ -60,14 +60,14 @@
   @include mq(md) {
     flex-direction: row;
     align-items: flex-end;
-    gap: rem(72);
+    gap: rem(70);
   }
 }
 
 
 .footer-information__address-zip {
   font-size: rem(18);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -77,7 +77,7 @@
 
 .footer-information__address-text {
   font-size: rem(18);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.5;
@@ -89,7 +89,7 @@
 
 .footer-information__number {
   font-size: rem(22);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
@@ -97,9 +97,14 @@
 }
 
 
+.footer-information__number:hover {
+  opacity: 0.6;
+}
+
+
 .footer-information__fax {
   font-size: rem(22);
-  font-family: $base-font-family;
+  font-family: $mincho-font-family;
   font-weight: $Bold;
   color: $white;
   line-height: 1.0;
