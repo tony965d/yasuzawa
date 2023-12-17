@@ -19,7 +19,7 @@
       <div class="contact__tel-block js-fadeUp">
         <h3 class="contact__tel-title js-fadeUp">お電話でのお問い合わせ</h3>
         <div class="contact__tel-item js-fadeUp">TEL</div>
-        <a class="contact__tel-number js-fadeUp" href="tel:049-24-3333">049-24-3333</a>
+        <a class="contact__tel-number js-fadeUp" href="tel:0749-24-3333">0749-24-3333</a>
         <p class="contact__reception-hours js-fadeUp">(受付時間/8:00〜17:00)</p>
       </div>
       <div class="contact__wrapper">

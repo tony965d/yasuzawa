@@ -99,9 +99,9 @@
           <div class="definition-contents__item definition-item definition-item--license js-fadeUp">
             <dt class="definition-item__name">有資格者情報</dt>
             <dd class="definition-item__text">
-              一級建築士<br>
-              建築積算士<br>
-              建築設備士
+              一級建築士（3名）<br>
+              建築積算士（3名）<br>
+              建築設備士（1名）
             </dd>
           </div>
         </dl>
@@ -124,7 +124,7 @@
               <p class="contents-block__address-text js-fadeUp">滋賀県彦根市立花町2-2（3番町ビル）</p>
             </div>
             <div class="contents-block__tel">
-              <a class="contents-block__number js-fadeUp" href="tel:049-24-3333">TEL　0749-24-3333</a>
+              <a class="contents-block__number js-fadeUp" href="tel:0749-24-3333">TEL　0749-24-3333</a>
               <div class="contents-block__fax js-fadeUp">FAX　0749-24-3533</div>
             </div>
           </div>

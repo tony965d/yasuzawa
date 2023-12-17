@@ -34,7 +34,7 @@
           </div>
           <div class="footer-contact__tel">
             <div class="footer-contact__tel-text">TEL</div>
-            <a href="tel:049-24-3333" class="footer-contact__number">049-24-3333</a>
+            <a href="tel:0749-24-3333" class="footer-contact__number">0749-24-3333</a>
           </div>
           <div class="footer-contact__button">
             <a href="<?php echo $contact ?>" class="button">メールでのお問い合わせはこちら</a>
@@ -54,7 +54,7 @@
               <div class="footer-information__address-text">滋賀県彦根市立花町2-2(3番町ビル)</div>
             </div>
             <div class="footer-information__tel">
-              <a class="footer-information__number" href="tel:049-24-3333">TEL.0749-24-3333</a>
+              <a class="footer-information__number" href="tel:0749-24-3333">TEL.0749-24-3333</a>
               <div class="footer-information__fax">FAX.0749-24-3533</div>
             </div>
           </div>

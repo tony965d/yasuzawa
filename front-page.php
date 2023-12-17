@@ -13,12 +13,27 @@
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv2.png" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv3.png" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv4.png" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv5.png" alt="">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture class="slide-image mv__image">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv6.png" alt="">
               </picture>
             </div>
           </div>

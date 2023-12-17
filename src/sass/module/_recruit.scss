@@ -6,7 +6,7 @@
   padding-bottom: rem(80);
   
   @include mq(md) {
-    padding-bottom: rem(294);
+    padding-bottom: rem(240);
   }
 }
 
@@ -72,7 +72,29 @@
 }
 
 
+.recruit__section-header {
+  margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(72);
+  }
+}
+
+
+.recruit__contents {
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(52);
+  }
+}
+
+
 .recruit__button {
   text-align: center;
-  margin-top: rem(60);
+  margin-top: rem(40);
+
+  @include mq(md) {
+    margin-top: rem(54);
+  }
 }

@@ -63,7 +63,7 @@
           </ul>
         </nav>
         <div class="header__tel">
-          <a href="tel:049-24-3333" class="header__tel-number">Tel 049-24-3333</a>
+          <a href="tel:0749-24-3333" class="header__tel-number">Tel 0749-24-3333</a>
         </div>
       </div>
     </div>

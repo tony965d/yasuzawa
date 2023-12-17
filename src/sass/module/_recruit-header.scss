@@ -1,0 +1,31 @@
+@use "global" as *;
+
+
+.recruit-header {
+  text-align: center;
+}
+
+
+.recruit-header__title {
+  display: inline-block;
+  font-size: rem(24);
+  font-family: $mincho-font-family;
+  font-weight: $Bold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.04em;
+  padding-bottom: rem(8);
+  border-bottom: solid 3px #223554;
+}
+
+
+.recruit-header__sub-title {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: $SemiBold;
+  color: $black;
+  line-height: 1.0;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-top: rem(40);
+}
