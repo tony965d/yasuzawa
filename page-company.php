@@ -4,7 +4,7 @@
   <section class="mv-sub">
     <div class="mv-sub__wrapper">
       <picture class="mv-sub__image js-mv-sub">
-        <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv-company.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv-company.jpg" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">会社概要</h2>
@@ -32,15 +32,11 @@
     </div>
     <div class="mission__group">
       <div class="mission__inner inner">
-        <h3 class="mission__title js-fadeUp">企業理念</h3>
+        <h3 class="mission__title js-fadeUp">私たちの想い</h3>
         <div class="mission__body">
           <p class="mission__text js-fadeUp">
-            情に棹させば流される。智に働けば角が立つ。
-            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
-            とかくに人の世は住みにくい。意地を通せば窮屈だ。 <br>
-            とかくに人の世は住みにくい。<br>
-            どこへ越しても住みにくいと悟った時、詩が生れて、画が出来る。
-            意地を通せば窮屈だ。山路を登りながら、こう考えた。
+            我が社は、1979年の創業以来今日に至るまで、クライアントの皆様に支持を頂きながら成長をしてまいりました。<br>
+            時代と共に変わりゆく建物への要望を、高い技術力と豊かな感性をもって、魅力ある建築物を創造し、地域社会に貢献していきます。
           </p>
         </div>
       </div>

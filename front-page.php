@@ -8,32 +8,32 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv.jpg" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv2.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv2.jpg" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv3.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv3.jpg" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv4.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv4.jpg" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv5.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv5.jpg" alt="">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="slide-image mv__image">
-                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv6.png" alt="">
+                <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv6.jpg" alt="">
               </picture>
             </div>
           </div>

@@ -4,7 +4,7 @@
   <section class="mv-sub">
     <div class="mv-sub__wrapper">
       <picture class="mv-sub__image js-mv-sub">
-        <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv-contact.png" alt="">
+        <img src="<?php echo get_template_directory_uri() ?>/dist/assets/images/common/mv-contact.jpg" alt="">
       </picture>
       <div class="mv-sub__body">
         <h2 class="mv-sub__title">お問い合わせ完了</h2>
