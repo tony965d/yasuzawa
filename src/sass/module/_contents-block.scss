@@ -108,6 +108,7 @@
   
   @include mq(md) {
     width: calc(538 / 1218 * 100%);
+    padding-top: rem(24);
   }
 }
 
@@ -120,16 +121,25 @@
 .contents-block--maps .contents-block__title::before {
   content: "";
   position: absolute;
-  top: rem(34);
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   width: rem(8);
   height: rem(28);
   background-color: $black;
   
   @include mq(md) {
-    top: rem(48);
+    top: 50%;
     width: rem(12);
     height: rem(36);
+  }
+}
+
+
+.contents-block--maps .contents-block__address {
+
+  @include mq(md) {
+    margin-top: rem(32);
   }
 }
 

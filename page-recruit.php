@@ -16,7 +16,7 @@
   <section class="recruit top-recruit">
     <div class="recruit__inner inner">
       <div class="recruit__wrapper">
-        <h3 class="recruit__title js-fadeUp">株式会社ヤスザワ設計ではスタッフを募集しています。</h3>
+        <h3 class="recruit__title hidden js-fadeUp">株式会社ヤスザワ設計ではスタッフを募集しています。</h3>
         <div class="recruit__body">
           <p class="recruit__text js-fadeUp">
             ヤスザワ設計では住宅、工場、オフィスビル、事務所ビル、医院、テナントの内装デザインなどよう用途にこだわらず幅広く設計を行うスタッフを募集しています。<br>
@@ -39,7 +39,7 @@
           </div>
           <div class="definition-contents__item definition-item definition-item--recruit js-fadeUp">
             <dt class="definition-item__name">勤務時間</dt>
-            <dd class="definition-item__text">9:00~17:00</dd>
+            <dd class="definition-item__text">9:00~17:30</dd>
           </div>
           <div class="definition-contents__item definition-item definition-item--recruit js-fadeUp">
             <dt class="definition-item__name">勤務地</dt>

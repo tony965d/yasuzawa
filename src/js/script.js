@@ -52,7 +52,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       once: true
    });
 
-
+   
 
    ///// 左からフェードイン /////
    $(".js-fadeLeft").css("opacity", 0);

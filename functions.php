@@ -66,21 +66,21 @@ function my_script_init() { // my_script_init 関数の定義
 add_action('wp_enqueue_scripts', 'my_script_init');
 
 
-///// ページの表示速度 /////
-function add_defer( $tag ) { // 'add_defer' 関数の定義
-	// 管理画面であれば何もせず、元のタグをそのまま返す
-	if (is_admin()){
-		return $tag; 
+	///// ページの表示速度 /////
+	function add_defer( $tag ) { // 'add_defer' 関数の定義
+		// 管理画面であれば何もせず、元のタグをそのまま返す
+		if (is_admin()){
+			return $tag; 
+		}
+		// タグ内に 'jquery.js' が含まれている場合も何もせず、元のタグをそのまま返す
+		if ( strpos( $tag, 'jquery.js' ) ){
+			return $tag;
+		}
+		// タグ内の 'src' を 'defer src' に置換し、スクリプトを遅延読み込みに変更
+		return str_replace( 'src', 'defer src', $tag );
 	}
-	// タグ内に 'jquery.js' が含まれている場合も何もせず、元のタグをそのまま返す
-	if ( strpos( $tag, 'jquery.js' ) ){
-		return $tag;
-	}
-	// タグ内の 'src' を 'defer src' に置換し、スクリプトを遅延読み込みに変更
-	return str_replace( 'src', 'defer src', $tag );
-}
-// 'script_loader_tag' フィルターに 'add_defer' 関数をフック
-add_filter( 'script_loader_tag', 'add_defer', 10 );
+	// 'script_loader_tag' フィルターに 'add_defer' 関数をフック
+	add_filter( 'script_loader_tag', 'add_defer', 10 );	
 
 
 ///// 記事の抜粋（excerpt）の文字数を制限 /////
@@ -226,3 +226,85 @@ add_action( 'admin_menu', 'Change_menulabel' );
 
 ///// WPのバージョンを非表示 /////
 remove_action('wp_head', 'wp_generator');
+
+
+
+
+
+// function insert_shortcode_before_h2($content) {
+// 	$shortcode = '[insert_banner]';
+// 	$shortcode_output = do_shortcode($shortcode);
+
+// 	if (is_single()) {
+// 			$position = strpos($content, '<h2>');
+// 			if ($position !== false) {
+// 					$output = substr_replace($content, $shortcode_output, $position, 0);
+// 					return $output;
+// 			}
+// 	}
+
+// 	return $content;
+// }
+// add_filter('the_content', 'insert_shortcode_before_h2');
+
+function insert_shortcodes_in_content($content) {
+	$insert_banner_shortcode = '[insert_banner]';
+
+	if (is_single()) {
+			// カテゴリー情報を取得
+			$category_obj = get_the_category();
+			// カテゴリーがあるかチェックし、最初のカテゴリーのIDを取得
+			$primary_category_id = !empty($category_obj) ? $category_obj[0]->cat_ID : null;
+
+			// 最初の <h2> タグの直前にショートコードを挿入
+			$position = strpos($content, '<h2>');
+			if ($position !== false) {
+					$content = substr_replace($content, do_shortcode($insert_banner_shortcode), $position, 0);
+			}
+
+			// 記事末尾にショートコードを追加
+			$content .= do_shortcode($insert_banner_shortcode);
+	}
+
+	return $content;
+}
+add_filter('the_content', 'insert_shortcodes_in_content', 20);
+
+
+
+function generate_banner_shortcode() {
+    ob_start();
+    
+    $category_obj = get_the_category();
+    $primary_category_id = $category_obj[0]->cat_ID;
+    
+    echo '<div style="text-align:center;">';
+
+    if ( $primary_category_id == 2 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub1.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 3 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-article.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 4 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub2.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 5 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub3.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 6 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub4.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 7 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub5.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 8 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub6.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 9 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub7.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } elseif ( $primary_category_id == 10 ) {
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works-sub8.jpg" alt="" style="width:320px;height:320px;"></a>';
+    } else {
+        // どの条件にも当てはまらなかった場合のデフォルトのバナー
+        echo '<a href="http://localhost:10065/" target="_blank"><img src="http://localhost:10065/wp-content/uploads/2023/12/works_two-block1.jpg" alt="" style="width:320px;height:320px;"></a>';
+    }
+
+    echo '</div>';
+
+    return ob_get_clean();
+}
+add_shortcode('insert_banner', 'generate_banner_shortcode');

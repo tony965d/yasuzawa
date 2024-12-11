@@ -16,7 +16,7 @@
   <section class="works-article">
     <div class="works-article__header">
       <div class="works-article__header-inner inner">
-        <h2 class="works-article__title js-fadeUp"><?php the_title(); ?></h2>
+        <h2 class="works-article__title hidden js-fadeUp"><?php the_title(); ?></h2>
         <div class="works-article__thumbnail js-fadeUp">
           <?php if (has_post_thumbnail()) { ?>
           <?php the_post_thumbnail('full'); ?>

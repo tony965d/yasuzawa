@@ -16,7 +16,7 @@
   <section class="works-sub top-works-sub">
     <div class="works-sub__header">
       <div class="works-sub__header-inner inner">
-        <h3 class="works-sub__category-title js-fadeUp">CATEGORY</h3>
+        <h3 class="works-sub__category-title hidden js-fadeUp">CATEGORY</h3>
         <div class="works-sub__categories categories js-fadeUp">
           <?php
             $args = [

@@ -16,7 +16,7 @@
   <section class="thanks">
     <div class="thanks__inner inner">
       <div class="thanks__body">
-        <h2 class="thanks__title js-fadeUp">
+        <h2 class="thanks__title hidden js-fadeUp">
           お問い合わせ内容を送信完了しました
         </h2>
         <p class="thanks__text js-fadeUp">
